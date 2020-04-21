@@ -24,4 +24,6 @@ app.post('/query-result',function(req,res)
             }
             console.log(req.body);
         });
+PORT = process.env["TEST_RESULT_PORT"] || 1234;
+
 var server=app.listen(1234,function() {});
