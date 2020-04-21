@@ -1,23 +1,14 @@
 var express=require('express');
 var path = require('path');
-var app=express();
+var app = express();
 var bodyParser = require("body-parser");
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 if (process.env["TEST_RESULT_USE_REVERSE_PROXY"] == null) {
-    app.use(express.static(path.join(__dirname,'public')));
+    app.use(express.static(path.join(__dirname,'../public')));
 }
 
-// app.get('/',function(req,res){
-//     res.sendFile("index.html", {root: path.join(__dirname, 'public')});
-// });
-// app.get('/positive',function(req,res){
-//     res.sendFile("positive.html", {root: path.join(__dirname, 'public')});
-// });
-// app.get('/negative',function(req,res){
-//     res.sendFile("negative.html", {root: path.join(__dirname, 'public')});
-// });
 
 app.post('/query-result',function(req,res)
         {
