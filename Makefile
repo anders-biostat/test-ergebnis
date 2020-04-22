@@ -4,3 +4,5 @@ init-db:
 add-test-data:
 	nodejs test/test-table.js
 
+run-prod:
+	 @TEST_RESULT_PORT=8081 nodejs server/app.js
