@@ -111,3 +111,26 @@ Ihr Test hat kein klares Ergebnis geliefert. Irgendetwas ist leider schief gegan
 empfehlen, dass Sie den Test wiederholen.
 
 
+-----
+
+## No result yet
+
+The test analysis is still running. Please try again in an hourv or two.
+
+If you have already been waiting for more than a day, something might have gone wrong. Please feel free to contact us and ask.
+
+
+## Noch kein Test-Ergebnis
+
+Der Test wird noch ausgewertet. Bitte versuchen Sie es in ein bis zwei Stunden nochmal.
+
+Falls Sie schon länger als einen tag auf ein Ergebnis warten, ist evtl. etwas schief gelaufen. Fragen Sie bei uns nach, wenn Sie möchten.
+
+-----
+
+## Unknown code
+
+This code does not exist in our data base. Maybe you have mistyped your code?
+
+Dieser Code existiert in unserer Datenbank nicht. Vielleicht haben Sie sich vertippt?
+
