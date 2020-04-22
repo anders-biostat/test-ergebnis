@@ -5,9 +5,9 @@ dbase = new sqlite.Database("db/results.db");
 sql = "INSERT INTO results (id, result) VALUES (?, ?)";
 
 res = [
-    ["positive", "positive"],
-    ["negative", "negative"],
-    ["inconclusive", "inconclusive"],
+    ["pos", "positive"],
+    ["neg", "negative"],
+    ["inc", "inconclusive"],
     ["empty", ""],
     ["res5", "positive"],
 ];
