@@ -14,25 +14,28 @@ if (process.env["TEST_RESULT_USE_REVERSE_PROXY"] == null) {
 app.post('/query-result',async function(req,res)
          {
              testid = req.body.testid;
-             // var result = null;
 
-             // const result = await
-             const result = await db.getTestResult(testid);//.then((x) => result = x);
-             // promise.then(() => {
-             console.log(result);
-             switch(result.result) {
-             case "+":
-                 res.redirect('positive.html');
-                 break;
-             case "-":
-                 res.redirect('negative.html');
-                 break;
-             default:
-                 res.redirect('error.html');
-             };
-             console.log(req.body);
-             // });
-             //promise.catch((err) => console.log(err));
+             try {
+             const result = await db.getTestResult(testid);
+                 console.log(req.body, result);
+
+                 if (result == null) {
+                     res.redirect("error.html");
+                     return;
+                 }
+                 switch(result.result) {
+                 case "+":
+                     res.redirect('positive.html');
+                     break;
+                 case "-":
+                     res.redirect('negative.html');
+                     break;
+                 default:
+                     res.redirect('error.html');
+                 };
+             } catch(e) {
+                 console.log(e);
+             }
          });
 PORT = process.env["TEST_RESULT_PORT"] || 1234;
 

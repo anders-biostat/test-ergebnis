@@ -11,7 +11,7 @@ let getTestResult = function(testid) {
             if (err) {
                 rej(err);
             } else {
-                res({testid: row.id, result: row.result});
+                res(row);
             }
         });
     });
