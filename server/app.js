@@ -16,6 +16,10 @@ if (process.env["TEST_RESULT_THROTTLE_RATE"] == null) {
     throttleOptions = {
         "rate": "5/s"
     }
+} else {
+    throttleOptions = {
+        "rate":process.env["TEST_RESULT_THROTTLE_RATE"]
+    }
 }
 
 app.post('/query-result', throttle(throttleOptions), async function(req,res)
