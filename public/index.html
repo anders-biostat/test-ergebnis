@@ -2,16 +2,26 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8"/>
-        <title>Test results</title>
+        <title>ZMBH Covid-Test</title>
         <link rel="stylesheet" href="style.css" type="text/css" media="screen" /></head>
     <body>
 
         <div id="content">
-            <h1>Anonymous Testergebnis</h1>
+            <h1>ZMBH Covid-Test</h1>
             <form action="query-result" method="post">
-                <label for="testid"> Test Identifikation Nummer </label>
-                <input type="text" id="testid" name="testid" value="" />
-                <input type="submit" value="Submit">
+                <table>
+                    <tr>
+                        <td width="400px" style="text-align: right;">
+                            <p class="eng">Please enter your 5-letter code here:</p>
+                            <p class="deu">Bitte geben Sie hier Ihren 5-Buchstaben-Code ein:</p>
+                        </td>
+                        <td style="padding: 40px">
+                            <input type="text" id="testid" name="testid" value="" size="5" maxlength="5" /><br>
+                        </td>
+                    </tr>
+                </table>
+                
+                <input type="submit" value="Check results / Ergebnis abfragen">
             </form>
         </div>
     </body>
