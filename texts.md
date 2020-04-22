@@ -10,7 +10,7 @@ Bitte geben Sie hier Ihren 5-Buchstaben-Code ein:  [________]
 ----------
 
 
-## Test Result: negative
+## Test Result: Negative
 
 [Deutsch: siehe unten]
 
@@ -37,7 +37,7 @@ guard down if you don’t score positive.
 
 
 
-## Test-Ergebnis: Negativ
+## Test-Ergebnis: negativ
 
 Unser LAMP-Test hat in Ihrer Probe keine RNA des Coronavirus SARS-CoV-2 detektiert.
 
@@ -81,7 +81,7 @@ Please remember that the test is anonymous, and that we don’t know your identi
 you have to report your infection yourself!
 
 
-## Test-Ergebnis: Positiv
+## Test-Ergebnis: positiv
 
 Sind sind wahrscheinlich ansteckend! Gehen Sie nach Hause, begeben Sie sich in Heim-Quarantäne, 
 und rufen Sie Ihren Arzt an.
@@ -97,7 +97,7 @@ müssen Ihre Infektion also selbst melden.
 
 ---
 
-## Test Result: inconclusive
+## Test Result: Inconclusive
 
 [Deutsch: siehe unten]
 
