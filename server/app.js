@@ -3,6 +3,7 @@ var path = require('path');
 var app = express();
 var bodyParser = require("body-parser");
 var db = require("./db.js");
+var throttle = require("express-throttle");
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -10,8 +11,14 @@ if (process.env["TEST_RESULT_USE_REVERSE_PROXY"] == null) {
     app.use(express.static(path.join(__dirname,'../public')));
 }
 
+var throttleOptions;
+if (process.env["TEST_RESULT_THROTTLE_RATE"] == null) {
+    throttleOptions = {
+        "rate": "5/s"
+    }
+}
 
-app.post('/query-result',async function(req,res)
+app.post('/query-result', throttle(throttleOptions), async function(req,res)
          {
              testid = req.body.testid;
 
