@@ -35,11 +35,14 @@ app.post('/query-result', throttle(throttleOptions), async function(req,res)
                      return;
                  }
                  switch(result.result) {
-                 case "+":
+                 case "positive":
                      res.redirect('positive.html');
                      break;
-                 case "-":
+                 case "negative":
                      res.redirect('negative.html');
+                     break;
+                 case "inconclusive":
+                     res.redirect('inconclusive.html');
                      break;
                  default:
                      res.redirect('error.html');
