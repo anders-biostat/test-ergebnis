@@ -23,3 +23,20 @@ all to the localhost:PORT
 Currently we use SQLite.
 The DB is generated with sqlite3 db/results.db file.
   
+## Service
+
+The configuration is located in ops/test-ergebnis.service.
+
+In case of any disaster, service is being restarted, but if it does not,
+
+```
+sudo systemctl start test-ergebnis
+```
+
+It server at 8081 localhost port.
+
+If you change the config for the service:
+
+```
+sudo systemctl daemon-reload
+```
