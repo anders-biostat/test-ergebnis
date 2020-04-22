@@ -31,7 +31,7 @@ app.post('/query-result', throttle(throttleOptions), async function(req,res)
                  console.log(req.body, result);
 
                  if (result == null) {
-                     res.redirect("error.html");
+                     res.redirect('unknown-code.html');
                      return;
                  }
                  switch(result.result) {
@@ -43,6 +43,9 @@ app.post('/query-result', throttle(throttleOptions), async function(req,res)
                      break;
                  case "inconclusive":
                      res.redirect('inconclusive.html');
+                     break;
+                 case "":
+                     res.redirect('not-ready.html');
                      break;
                  default:
                      res.redirect('error.html');
