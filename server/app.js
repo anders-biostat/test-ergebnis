@@ -22,13 +22,13 @@ app.post('/query-result',async function(req,res)
              console.log(result);
              switch(result.result) {
              case "+":
-                 res.redirect('/positive.html');
+                 res.redirect('positive.html');
                  break;
              case "-":
-                 res.redirect('/negative.html');
+                 res.redirect('negative.html');
                  break;
              default:
-                 res.redirect('/error.html');
+                 res.redirect('error.html');
              };
              console.log(req.body);
              // });
