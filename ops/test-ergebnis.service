@@ -1,0 +1,14 @@
+[Unit]
+Description=test-ergebnis app for returning the lab results to people.
+After=network.target
+
+[Service]
+Environment=TEST_RESULT_PORT=8081
+Type=simple
+User=www-data
+ExecStart=/usr/bin/node /var/www/apps/test-ergebnis/app/server.js
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+
