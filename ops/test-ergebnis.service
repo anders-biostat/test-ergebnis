@@ -5,7 +5,7 @@ After=network.target
 [Service]
 WorkingDirectory=/var/www/apps/test-ergebnis
 Environment=TEST_RESULT_PORT=8081
-Environment="TEST_RESULT_THROTTLE_RATE=5/30min"
+Environment="TEST_RESULT_THROTTLE_RATE=10/10min"
 Type=simple
 User=www-data
 ExecStart=/usr/bin/node /var/www/apps/test-ergebnis/server/app.js
