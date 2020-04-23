@@ -18,7 +18,7 @@ dbfile = args.dbfile
 
 db = sqlite3.connect(dbfile)
 try:
-    tbl = pd.read_csv(csvfile, header=None)
+    tbl = pd.read_csv(csvfile, header=None, keep_default_na=False)
 except Exception as e:
     print("Error while reading file {}".format(csvfile))
     print(e)
