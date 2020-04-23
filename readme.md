@@ -12,6 +12,10 @@
   ```
   make run-prod
   ``` 
+- access log  
+  Writes [testid|GMT time (not CEST!)].
+  By default, it writes to the file ./log/access.log  
+  It can be changed by TEST_RESULT_LOG_FILE env variable in the ops/test-ergebnis.service
 
 ## Nginx
 
