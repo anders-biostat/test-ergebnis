@@ -2,7 +2,7 @@
 
 const sqlite3 = require('sqlite3');
 DB_PATH = process.env["TEST_RESULT_DB"] || "db/results.db";
-let db = new sqlite3.Database(DB_PATH, sqlite3.OPEN_READWRITE);
+let db = new sqlite3.Database(DB_PATH, sqlite3.OPEN_READONLY);
 
 let getTestResult = function(testid) {
     const result = new Promise((res, rej) => {
@@ -14,7 +14,6 @@ let getTestResult = function(testid) {
                 res(row);
             }
         });
-        db.all(`UPDATE results SET seen = 1 WHERE id = ?`, [testid]);
     });
     return result;
 };
