@@ -26,6 +26,12 @@ all to the localhost:PORT
 
 Currently we use SQLite.
 The DB is generated with sqlite3 db/results.db file.
+
+Add new data with a csv file with:
+- two columns [testid], [testresult (can be "")]
+- three columns [testid], [testresult], [timestamp].
+
+Python script db/upsert-results.py --dbpath X --csv Y.
   
 ## Service
 
