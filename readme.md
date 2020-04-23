@@ -40,3 +40,6 @@ If you change the config for the service:
 ```
 sudo systemctl daemon-reload
 ```
+
+To see the log of the service (in case it does not function or can not start),
+look for messages in /var/log/syslog file.
