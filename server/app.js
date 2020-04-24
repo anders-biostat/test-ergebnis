@@ -65,6 +65,11 @@ app.post('/query-result', throttle(throttleOptions), async function(req,res)
                  console.log(e);
              }
          });
-PORT = process.env["TEST_RESULT_PORT"] || 1234;
 
+app.use(function (req, res, next) {
+    res.status(404).send("Sorry can't find that!");
+})
+
+
+PORT = process.env["TEST_RESULT_PORT"] || 1234;
 var server=app.listen(PORT, function() {});
